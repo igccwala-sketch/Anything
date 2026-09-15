@@ -28,7 +28,11 @@ nixPkgs = [
 cmds = ["python -m pip install --upgrade pip", "pip install -r requirements.txt"]
 
 [phases.build]
-cmds = ["playwright install chromium", "playwright install-deps chromium"]
+cmds = ["playwright install chromium && playwright install-deps chromium"]
+cacheDirectories = ["/root/.cache/ms-playwright"]
+
+[variables]
+PLAYWRIGHT_BROWSERS_PATH = "/root/.cache/ms-playwright"
 
 [start]
 cmd = "python bot.py"
