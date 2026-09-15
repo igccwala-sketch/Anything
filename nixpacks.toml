@@ -1,5 +1,28 @@
 [phases.setup]
 nixPkgsArchive = "master"
+nixPkgs = [
+  "glib",
+  "file",
+  "nspr",
+  "nss",
+  "dbus",
+  "at-spi2-atk",
+  "cups",
+  "libdrm",
+  "expat",
+  "libxkbcommon",
+  "xorg.libX11",
+  "xorg.libXcomposite",
+  "xorg.libXdamage",
+  "xorg.libXext",
+  "xorg.libXfixes",
+  "xorg.libXrandr",
+  "mesa",
+  "cairo",
+  "pango",
+  "alsa-lib",
+  "gtk3"
+]
 
 [phases.install]
 cmds = ["python -m pip install --upgrade pip", "pip install -r requirements.txt"]
