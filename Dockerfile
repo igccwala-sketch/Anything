@@ -47,7 +47,7 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 # Download and cache the Chromium browser used by Playwright
-RUN playwright install --with-deps chromium
+RUN playwright install chromium
 
 # Copy application source
 COPY . .
